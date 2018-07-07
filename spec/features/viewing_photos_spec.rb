@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper.rb'
 
 feature 'Posts are displayed on the index' do

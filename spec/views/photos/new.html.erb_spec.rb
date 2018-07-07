@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe "photos/new", type: :view do
   before(:each) do
     assign(:photo, Photo.new(
-      :caption => "MyText"
+                     caption: "MyText"
     ))
   end
 

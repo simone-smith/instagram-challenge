@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -6,6 +8,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'rubocop', '0.56.0'
+gem 'rubocop-rails'
 ruby '2.5.0'
 gem 'devise'
 gem 'bootstrap'
