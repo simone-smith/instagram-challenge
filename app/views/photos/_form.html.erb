@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.file_field :image, :required => true %>
   </div>
 
   <div class="field">
     <%= form.label :caption %>
-    <%= form.text_area :caption, id: :photo_caption %>
+    <%= form.text_area :caption, id: :photo_caption, :required => true %>
   </div>
 
   <div class="actions">

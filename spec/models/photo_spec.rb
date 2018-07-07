@@ -16,4 +16,9 @@ RSpec.describe Photo, type: :model do
     expect(photo).not_to be_valid
   end
 
+  it 'an image should be present' do
+    unless @photo.image.attached?
+      expect(photo).not_to be_valid
+    end
+  end
 end
