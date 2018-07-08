@@ -11,17 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image, :required => true %>
+  <div class="form wrapper">
+    <div class="field form-group text-center">
+      <%= form.label :image %>
+      <%= form.file_field :image, :required => true %>
+    </div>
+
+    <div class="field form-group text-center">
+      <%= form.label :caption %>
+      <%= form.text_area :caption, id: :photo_caption, :required => true %>
+    </div>
+
+    <div class="actions form-group text-center">
+      <%= form.submit %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :caption %>
-    <%= form.text_area :caption, id: :photo_caption, :required => true %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

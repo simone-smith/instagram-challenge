@@ -1,14 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Image:</strong>
-    <%= image_tag @photo.image %>
-</p>
-
-<p>
-  <strong>Caption:</strong>
-  <%= @photo.caption %>
-</p>
-
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+<div class="posts-wrapper row">
+  <div class="post">
+    <div class="post-head">
+      <div class="name">
+        Simone
+      </div>
+    </div>
+    <div class="image center-block">
+      <%= image_tag @photo.image %>
+    </div>
+    <p class="caption">
+      <%= @photo.caption %>
+    </p>
+    <div class="text-center edit-links">
+      <%= link_to "Cancel", photos_path %>
+      |
+      <%= link_to "Edit", edit_photo_path(@photo) %>
+      |
+      <%= link_to "Delete", @photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+</div>

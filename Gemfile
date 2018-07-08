@@ -11,9 +11,9 @@ gem 'rubocop', '0.56.0'
 gem 'rubocop-rails'
 ruby '2.5.0'
 gem 'devise'
-gem 'bootstrap'
 gem 'jquery-rails'
 gem "font-awesome-rails"
+gem 'simple_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
@@ -21,6 +21,7 @@ gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
+gem 'bootstrap-sass', '~> 3.3.7'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
