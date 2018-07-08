@@ -5,7 +5,7 @@ require 'rails_helper.rb'
 feature 'Viewing individual posts' do
   background do
     user = create :user
-    photo = create :photo
+    photo = create(:photo, user_id: 1)
     sign_in_with user
   end
 

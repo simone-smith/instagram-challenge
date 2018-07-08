@@ -5,9 +5,10 @@ require 'rails_helper'
 RSpec.describe "photos/index", type: :view do
 
   before(:each) do
+    user = create :user
     assign(:photos, [
-      @photo = create(:photo, caption: "This is a photo!"),
-      @photo = create(:photo, caption: "This is a photo!")
+      @photo = create(:photo, caption: "This is a photo!", user_id: 1),
+      @photo = create(:photo, caption: "This is a photo!", user_id: 1)
     ])
   end
 

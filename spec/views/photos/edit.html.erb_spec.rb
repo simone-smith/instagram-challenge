@@ -4,7 +4,8 @@ require 'rails_helper'
 
 RSpec.describe "photos/edit", type: :view do
   before(:each) do
-    @photo = assign(:photo, create(:photo, caption: "This is a photo!"))
+    @user = assign(:user, create(:user))
+    @photo = assign(:photo, create(:photo, caption: "This is a photo!", user_id: 1))
   end
 
   it "renders the edit photo form" do

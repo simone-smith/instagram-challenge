@@ -4,10 +4,9 @@ require 'rails_helper.rb'
 
 feature 'Editing photos' do
   background do
-    photo = create :photo
     user = create :user
+    photo = create(:photo, user_id: 1)
     sign_in_with user
-
     find(:xpath, "//a[contains(@href,'photos/2')]").click
     click_link 'Edit'
   end

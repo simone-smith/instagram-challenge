@@ -4,9 +4,9 @@ require 'rails_helper.rb'
 
 feature 'Posts are displayed on the index' do
   background do
-    photo_one = create(:photo, caption: "This is the first photo")
-    photo_two = create(:photo, caption: "This is the second photo")
-    user = create :user
+    user = create(:user)
+    photo_one = create(:photo, caption: "This is the first photo", user_id: 1)
+    photo_two = create(:photo, caption: "This is the second photo", user_id: 1)
     sign_in_with user
   end
 

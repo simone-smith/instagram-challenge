@@ -15,5 +15,6 @@ feature 'Create posts' do
     click_button 'Create Photo'
     expect(page).to have_content('Cute cat, obviously - this is Instagram after all')
     expect(page).to have_css("img[src*='cat.jpg']")
+    expect(page).to have_content('Simone')
   end
 end

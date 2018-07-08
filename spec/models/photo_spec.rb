@@ -4,7 +4,8 @@ require 'rails_helper'
 
 RSpec.describe Photo, type: :model do
   before(:each) do
-    @photo = create(:photo, caption: "This is a photo!")
+    user = create :user
+    @photo = create(:photo, caption: "This is a photo!", user_id: 1)
   end
 
   let(:photo) { @photo }
