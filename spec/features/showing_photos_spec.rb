@@ -6,10 +6,7 @@ feature 'Viewing individual posts' do
   background do
     user = create :user
     photo = create :photo
-    visit '/'
-    fill_in 'Email', with: user.email
-    fill_in 'Password', with: user.password
-    click_button 'Log in'
+    sign_in_with user
   end
 
   scenario 'a user can view an individual post' do

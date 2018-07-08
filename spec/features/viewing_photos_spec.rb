@@ -7,11 +7,7 @@ feature 'Posts are displayed on the index' do
     photo_one = create(:photo, caption: "This is the first photo")
     photo_two = create(:photo, caption: "This is the second photo")
     user = create :user
-
-    visit '/'
-    fill_in 'Email', with: user.email
-    fill_in 'Password', with: user.password
-    click_button 'Log in'
+    sign_in_with user
   end
 
   scenario 'a user can view all posts on the index page' do
