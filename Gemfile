@@ -14,6 +14,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'simple_form'
+gem 'launchy'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record

@@ -3,11 +3,17 @@
 require 'rails_helper.rb'
 
 feature 'Viewing individual posts' do
-  scenario 'a user can view an individual post' do
-    photo = create(:photo)
-    id = photo.id
+  background do
+    user = create :user
+    photo = create :photo
     visit '/'
-    click_link("Show")
-    expect(page.current_path).to eq('/photos/' + id.to_s)
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+    click_button 'Log in'
+  end
+
+  scenario 'a user can view an individual post' do
+    find(:xpath, "//a[contains(@href,'photos/3')]").click
+    expect(page.current_path).to eq(photo_path(3))
   end
 end
